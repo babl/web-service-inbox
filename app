@@ -32,7 +32,7 @@ function requestListener(req, res) {
         });
       } else {
         res.statusCode = 404;
-        res.end('404');
+        res.end();
       }
     });
 }
