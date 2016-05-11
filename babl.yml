@@ -1,1 +1,5 @@
 id: babl/inbox
+cmd: app
+mem: 32
+env:
+  SERVICE_TAGS: web
