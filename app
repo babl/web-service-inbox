@@ -15,7 +15,7 @@ function requestListener(req, res) {
     .on('data', body.push.bind(body))
     .on('end', function() {
       if (owner) {
-        Babl.module('mondoreale/trigger', {
+        Babl.module('babl/trigger', {
           stdin: Buffer.concat(body),
           env: {
             EVENT: 'babl:inbox',
