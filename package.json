@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "node-babl": "^1.0.0"
+  }
+}
