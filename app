@@ -31,7 +31,7 @@ function isTriggerPath(pathname) {
 function trigger(pathname, req, res) {
   var matches = (req.url.match(triggerRgx) || []).slice(-2);
   var owner = matches[0];
-  var module = matches[1];
+  var label = matches[1];
   var body = [];
 
   req
@@ -42,7 +42,7 @@ function trigger(pathname, req, res) {
         env: {
           EVENT: 'babl:inbox',
           USER: owner,
-          MODULE: module,
+          LABEL: label,
           CONTENT_TYPE: req.headers['content-type'],
         }
       }).then(function() {
