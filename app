@@ -17,7 +17,7 @@ function isGet(req) {
 }
 
 function isPost(req) {
-  return /^(post|put)$/ig.test(req.method);
+  return /^(post|put|patch)$/ig.test(req.method);
 }
 
 function isRootPath(pathname) {
