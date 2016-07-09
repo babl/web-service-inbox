@@ -37,7 +37,7 @@ function trigger(pathname, req, res) {
   req
     .on('data', body.push.bind(body))
     .on('end', function() {
-      Babl.module('babl/trigger', {
+      Babl.module('babl/events', {
         stdin: Buffer.concat(body),
         env: {
           EVENT: 'babl:inbox',
